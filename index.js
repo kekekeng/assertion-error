@@ -66,7 +66,7 @@ function AssertionError (message, _props, ssf) {
   }
 
   // capture stack trace
-  ssf = ssf || arguments.callee;
+  ssf = ssf || AssertionError;
   if (ssf && Error.captureStackTrace) {
     Error.captureStackTrace(this, ssf);
   } else {
